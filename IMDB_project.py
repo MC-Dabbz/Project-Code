@@ -31,8 +31,9 @@ movies_df.info()
 
 # remove any duplicates if present
 duplicates = movies_df.duplicated()
-print(f'There are {sum(duplicates)} duplicate rows')
+
 if sum(duplicates) > 0:
+    print(f'There are {sum(duplicates)} duplicate rows')
     movies_df.drop_duplicates(inplace = True)
     print("Duplicate rows have been removed")
 else:
